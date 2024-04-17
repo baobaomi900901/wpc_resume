@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  font-family: "Titillium Web", sans-serif;
+  user-select: none;
+}
+body {
+  background: #232323;
+  overflow-x: hidden;
+}
+
+button {
+  text-transform: capitalize;
+}
+
+button:hover {
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.75);
+}
+
+.special {
+  position: relative;
+  display: inline-block;
+}
+.special:before,
+.special:after {
+  content: "i";
+  color: #f50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: inset(0px 0px 68% 0px);
+}
+
+.special2 {
+  position: relative;
+  display: inline-block;
+}
+.special2:before,
+.special2:after {
+  content: attr(data);
+  color: #f50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: inset(68% 0 0% 0px);
+}
