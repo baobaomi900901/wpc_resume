@@ -13,6 +13,8 @@
 
 <script setup>
 import { ref, reactive } from "vue";
+// 引入gsap
+import { gsap } from "gsap";
 </script>
 <style scoped>
 </style>

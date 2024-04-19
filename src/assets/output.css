@@ -556,9 +556,50 @@ video {
   --tw-contain-style:  ;
 }
 
+.absolute{
+  position: absolute;
+}
+
+.flex{
+  display: flex;
+}
+
+.h-12{
+  height: 3rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
+.items-center{
+  align-items: center;
+}
+
+.justify-center{
+  justify-content: center;
+}
+
+.overflow-y-scroll{
+  overflow-y: scroll;
+}
+
+.border-4{
+  border-width: 4px;
+}
+
+.border-2{
+  border-width: 2px;
+}
+
 .text-red-500{
   --tw-text-opacity: 1;
   color: rgb(239 68 68 / var(--tw-text-opacity));
+}
+
+.text-white{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 * {
