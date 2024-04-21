@@ -12,9 +12,12 @@
 </template>
 
 <script setup>
-import { ref, reactive } from "vue";
-// 引入gsap
+import { ref, reactive, onMounted } from "vue";
 import { gsap } from "gsap";
+
+onMounted(() => {
+  console.log("home");
+});
 </script>
 <style scoped>
 </style>

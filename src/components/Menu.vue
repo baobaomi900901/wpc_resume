@@ -21,6 +21,6 @@ import { ref, reactive } from "vue";
 </script>
 <style scoped>
 .link-light {
-  color: #fff;
+  color: yellowgreen;
 }
 </style>

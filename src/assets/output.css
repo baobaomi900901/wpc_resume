@@ -602,6 +602,10 @@ video {
   display: flex;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-12{
   height: 3rem;
 }
@@ -666,6 +670,15 @@ video {
 .bg-orange-500{
   --tw-bg-opacity: 1;
   background-color: rgb(249 115 22 / var(--tw-bg-opacity));
+}
+
+.bg-yellow-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 179 8 / var(--tw-bg-opacity));
+}
+
+.bg-none{
+  background-image: none;
 }
 
 .text-xl{
