@@ -11,5 +11,4 @@ export default defineStore('main', {
             webMode: 'light',
         }
     },
-
 });
