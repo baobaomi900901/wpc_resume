@@ -1,20 +1,11 @@
 <template>
-  <Menu ref="MenuDom" />
+  <Menu />
   <router-view />
 </template>
 
 <script setup>
 import Menu from "./components/Menu.vue";
-import useMainStore from "./store";
-import { ref, onMounted } from "vue";
-import { gsap } from "gsap";
 
-const store = useMainStore();
-console.log("init :>>", store.loading);
-
-const MenuDom = ref();
-
-onMounted(() => {});
 </script>
 
 <style scoped>

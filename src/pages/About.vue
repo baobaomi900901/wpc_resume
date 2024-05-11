@@ -7,12 +7,20 @@
 !-->
 <template>
   <div id="About" class="About">
-    <h1>about</h1>
+    <h1>about
+      <IconGlobalOperation :size="16" />
+    </h1>
   </div>
 </template>
 
 <script setup>
 import { ref, reactive } from "vue";
+import { IconGlobalOperation } from 'ksw-vue-icon'
+
+console.log('IconGlobalOperation :>> ', IconGlobalOperation);
+
+
 </script>
 <style scoped>
 </style>
+

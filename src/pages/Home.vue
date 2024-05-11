@@ -6,35 +6,42 @@
 * @version V3.0.0
 !-->
 <template>
-      <div
-      ref="loading"
-      class="loading w-screen h-screen absolute overflow-y-scroll no-scrollbar"
-      >
-      <!-- class="logoBorder w-12 h-12 border-2 absolute flex justify-center items-center" -->
-      <div
-        ref="logoBorder"
-        class="logoBorder w-12 h-12 border-2 border-white"
-      ></div>
-      <span ref="logoText" class="logoText text-white font-bold text-xl"
-        >w</span
-      >
-      <div ref="imageBox" class="imageBox w-screen h-screen relative">
-        <div ref="center" class="center bg-yellow-500">center</div>
-        <div ref="leftTop" class="leftTop bg-red-500">left top</div>
-        <div ref="leftBottom" class="leftBottom bg-green-500">left bottom</div>
-        <div ref="rightTop" class="rightTop bg-orange-500">right top</div>
-        <div ref="rightBottom" class="rightBottom bg-blue-500">
-          right bottom
-        </div>
+  <!-- <div
+    ref="loading"
+    class="loading w-screen h-screen absolute overflow-y-scroll no-scrollbar"
+  >
+    <div
+      ref="logoBorder"
+      class="logoBorder w-12 h-12 border-2 border-white"
+    ></div>
+    <span ref="logoText" class="logoText text-white font-bold text-xl"
+      >w</span>
+    <div ref="imageBox" class="imageBox w-screen h-screen relative">
+      <div ref="center" class="center bg-yellow-500">center</div>
+      <div ref="leftTop" class="leftTop bg-red-500">left top</div>
+      <div ref="leftBottom" class="leftBottom bg-green-500">left bottom</div>
+      <div ref="rightTop" class="rightTop bg-orange-500">right top</div>
+      <div ref="rightBottom" class="rightBottom bg-blue-500">
+        right bottom
       </div>
     </div>
-  <div ref="home" id="home" class="home text-red-500">
-    <div class="IntroduceOneself">
+  </div> -->
+  123
+  <IconName />
+  <IconArrowBottom :size="24" color="#333" />
+  <IconCTypeLegoColor :size="24" color="#333" />
+  <IconAdd :size="24" color="#333" />
+  <IconEmptyBox :size="24" color="#333" />
+  <div ref="home" id="home" class="home w-screen h-screen">
+    <div class="IntroduceOneself w-full h-screen">
       <video
-      muted="" playsinline="" autoplay="" loop="" class="w-screen  h-full"
+      muted="" playsinline="" autoplay="" loop="" class=" "
       >
-      <source src="../../public/C.mp4"></source>
+      <source src="../../public/C.mp4" />
       </video>
+    </div>
+    <div class="portfolio-list">
+      <h1>portfolio</h1>
     </div>
   </div>
 </template>
@@ -43,21 +50,25 @@
 import { ref, reactive, onMounted, watch } from "vue";
 import { gsap } from "gsap";
 import useMainStore from "../store";
+
+import { IconEmptyBox } from 'ksw-vue-icon'
+
 const store = useMainStore();
 
-const loading = ref();
-const logoBorder = ref();
-const logoText = ref();
-const imageBox = ref();
-const center = ref();
-const leftTop = ref();
-const leftBottom = ref();
-const rightTop = ref();
-const rightBottom = ref();
+// const loading = ref();
+// const logoBorder = ref();
+// const logoText = ref();
+// const imageBox = ref();
+// const center = ref();
+// const leftTop = ref();
+// const leftBottom = ref();
+// const rightTop = ref();
+// const rightBottom = ref();
 
 const home = ref();
 
 onMounted(() => {
+  /* #region loading 动画
   const tl = gsap.timeline({
     // repeat: 1, // 重复次数, -1 代表无限循环
     // repeatDelay: 0.5, // 重复延迟
@@ -153,7 +164,8 @@ onMounted(() => {
     duration: 0.5,
     onComplete: () => {
       store.loading = true;
-      console.log("store.loading = true");
+      console.log("store.loading = true", store.loading);
+      loading.value.style.display = "none";
     },
   });
   const loadingBGTransparent = gsap.fromTo(
@@ -169,7 +181,7 @@ onMounted(() => {
     home.value,
     { opacity: 0, y: "16%" },
     {
-      y: "12%" ,
+      y: "12%",
       opacity: 1,
       duration: 0.5,
       onComplete: () => {
@@ -190,14 +202,17 @@ onMounted(() => {
   tl.add(RightBottomDebut, "-=0.5");
   tl.add(imageBoxRotate);
   tl.add(imageBoxHidden);
-  tl.add(homeDebut,"-=0.25");
+  tl.add(homeDebut, "-=0.25");
 
   // 启动 tl
-  tl.play();
+  // tl.play();
   // // 监听 tl 完成
   tl.eventCallback("onComplete", () => {
     console.log("tl:>> 动画完成");
   });
+   #endregion
+  */
+
 });
 </script>
 <style scoped>
@@ -250,5 +265,16 @@ onMounted(() => {
 .rightBottom {
   bottom: 0;
   right: 0;
+}
+.home {
+  position: absolute;
+  top: 20rem;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>
