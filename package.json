@@ -1,14 +1,14 @@
 {
   "name": "wpc_resume2",
   "private": true,
-  "version": "0.0.10",
+  "version": "0.0.11",
   "type": "commonjs",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
     "watch": "npx tailwindcss -i ./src/assets/input.css -o ./src/assets/output.css --watch",
-    "upv": "node ./updateVersion.js && git add . && git commit -m 'update version' && git push"
+    "upv": "node ./updateVersion.js && git add . && node ./updateCommit.js && git push"
   },
   "dependencies": {
     "gsap": "^3.9.1",
